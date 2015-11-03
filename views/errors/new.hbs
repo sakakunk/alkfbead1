@@ -1,0 +1,41 @@
+<div class="page-header">
+    <h1>Új hiba bejelentése</h1>
+</div>
+
+<form class="form-horizontal" method="post">
+    <fieldset>
+        <div class="form-group
+            {{#if validationErrors.helyszin}}
+                has-error
+            {{/if}}
+        ">
+            <label for="helyszin" class="col-lg-2 control-label">Helyszín</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="helyszin" name="helyszin" placeholder="pl. PC6, Lovarda, 2. emeleti folyosó..." type="text" value="{{data.helyszin}}">
+                {{#if validationErrors.helyszin}}
+                    <span class="help-block">{{validationErrors.helyszin.msg}}</span>
+                {{/if}}
+            </div>
+        </div>
+        <div class="form-group
+            {{#if validationErrors.leiras}}
+                has-error
+            {{/if}}
+        ">
+            <label for="leiras" class="col-lg-2 control-label">Leírás</label>
+            <div class="col-lg-10">
+                <textarea class="form-control" rows="3" id="leiras" name="leiras">{{data.leiras}}</textarea>
+                <span class="help-block">Meg kell adni a helyszínt, ha pedig konkrét géppel van probléma, akkor azt is.</span>
+                {{#if validationErrors.leiras}}
+                    <span class="help-block">{{validationErrors.leiras.msg}}</span>
+                {{/if}}
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+</form>        
