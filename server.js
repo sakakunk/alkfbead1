@@ -100,7 +100,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(session({
-    cookie: { maxAge: 60000 },
+    cookie: { maxAge: 600000 },
     secret: 'titkos szoveg',
     resave: false,
     saveUninitialized: false,

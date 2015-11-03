@@ -1,8 +1,8 @@
 {
-  "name": "gyak3",
+  "name": "bead1",
   "version": "0.0.0",
   "authors": [
-    "horvathgyozo <gyozke@inf.elte.hu>"
+    "Balint Adam <sakakunk@gmail.com>"
   ],
   "license": "MIT",
   "ignore": [
@@ -14,6 +14,6 @@
   ],
   "dependencies": {
     "bootstrap": "~3.3.5",
-    "bootswatch": "~3.3.5+3"
+    "bootswatch": "~3.3.5"
   }
 }

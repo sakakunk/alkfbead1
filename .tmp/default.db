@@ -3,72 +3,25 @@
     "error": [
       {
         "status": "new",
-        "location": "qqq",
-        "description": "www",
-        "date": "2015-10-05T12:26:43.855Z",
-        "createdAt": "2015-10-05T12:26:43.857Z",
-        "updatedAt": "2015-10-05T12:26:43.857Z",
+        "location": "Lovi",
+        "description": "rossz netkáébel",
+        "date": "2015-11-03T12:48:44.197Z",
+        "createdAt": "2015-11-03T12:48:44.199Z",
+        "updatedAt": "2015-11-03T12:48:44.199Z",
         "id": 1
-      },
-      {
-        "status": "new",
-        "location": "wegvwergvb",
-        "description": "berwherh",
-        "date": "2015-10-05T12:30:37.981Z",
-        "createdAt": "2015-10-05T12:30:37.982Z",
-        "updatedAt": "2015-10-05T12:30:37.982Z",
-        "id": 2
-      },
-      {
-        "status": "new",
-        "location": "pc6",
-        "description": "rossz",
-        "date": "2015-10-12T13:26:28.596Z",
-        "createdAt": "2015-10-12T13:26:28.597Z",
-        "updatedAt": "2015-10-12T13:26:28.597Z",
-        "id": 3
-      },
-      {
-        "status": "new",
-        "location": "pc6",
-        "description": "rossz",
-        "date": "2015-10-12T13:27:03.715Z",
-        "createdAt": "2015-10-12T13:27:03.715Z",
-        "updatedAt": "2015-10-12T13:27:03.715Z",
-        "id": 4
-      },
-      {
-        "status": "new",
-        "location": "pc6",
-        "description": "rossz",
-        "date": "2015-10-12T13:29:27.426Z",
-        "createdAt": "2015-10-12T13:29:27.426Z",
-        "updatedAt": "2015-10-12T13:29:27.426Z",
-        "id": 5
       }
     ],
     "user": [
       {
-        "surname": "q",
-        "forename": "q",
-        "neptun": "q",
-        "password": "q",
+        "surname": "Bálint",
+        "forename": "Ádám",
+        "neptun": "gxid1u",
+        "password": "$2a$10$Zsdu1oIgzZv2z8izqjWcU.0kd0WCN/E5SGN/2DliXy2WutEpUDZn6",
         "avatar": "",
         "role": "riporter",
-        "createdAt": "2015-10-12T12:09:54.312Z",
-        "updatedAt": "2015-10-12T12:09:54.312Z",
-        "id": 2
-      },
-      {
-        "surname": "Horváth",
-        "forename": "Győző",
-        "neptun": "k81dnc",
-        "password": "$2a$10$KIpMlrBNk9sGrgluiEbHKeA/U5qU14cri.tWWGydKMU8w1FLFcDpq",
-        "avatar": "",
-        "role": "riporter",
-        "createdAt": "2015-10-12T12:42:24.139Z",
-        "updatedAt": "2015-10-12T12:42:24.139Z",
-        "id": 3
+        "createdAt": "2015-11-03T12:36:48.075Z",
+        "updatedAt": "2015-11-03T12:36:48.075Z",
+        "id": 1
       }
     ]
   },
@@ -153,10 +106,10 @@
   },
   "counters": {
     "error": {
-      "id": 5
+      "id": 1
     },
     "user": {
-      "id": 3
+      "id": 1
     }
   }
 }

@@ -4,7 +4,7 @@ module.exports = {
     identity: 'user',
     connection: 'default',
     attributes: {
-        neptun: {
+        id: {
             type: 'string',
             required: true,
             unique: true,
@@ -27,13 +27,13 @@ module.exports = {
         },
         role: {
             type: 'string',
-            enum: ['riporter', 'operator'],
+            enum: ['simpleuser', 'admin'],
             required: true,
-            defaultsTo: 'riporter'
+            defaultsTo: 'simpleuser'
         },
         
-        errors: {
-            collection: 'error',
+        footballmatches: {
+            collection: 'footballmatch',
             via: 'user'
         },
         
