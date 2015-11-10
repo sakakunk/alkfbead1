@@ -214,26 +214,34 @@ router.get('/list/:id/edit/:id2', function(req, res){
 	var validationErrors = (req.flash('validationErrors') || [{}]).pop();	
 	var data = (req.flash('data') || [{}]).pop();
 	req.app.models.footballmatch.findOne({id:footballmatchid}).then(function ( footballmatch) {
-		req.app.models.user.findOne({id:userid}).then(function(user){
-			if(footballmatch.user!==userid && user.role	!=='admin'){ // ha nincs jogosultsága megtekinteni
-					res.render('playerevent/error');
-			}else{
-				req.app.models.playerevent.findOne({id:eventid}).then(function(playerevent){
-					var eventtype={}; //h menjen a rádiógomb
-					eventtype[playerevent.eventcategory]=true; //ez is
-					var team={}; // ez is
-					team[playerevent.team]=true; //ez is
-					res.render('playerevent/edit', {
-						playerevent: playerevent,
-						footballmatch: footballmatch,
-						data: data,
-						validationErrors: validationErrors,
-						eventtype: eventtype,
-						team: team
+		if(footballmatch===undefined){
+			res.render('404');
+		}else{
+			req.app.models.user.findOne({id:userid}).then(function(user){
+				if(footballmatch.user!==userid && user.role	!=='admin'){ // ha nincs jogosultsága megtekinteni
+						res.render('playerevent/error');
+				}else{
+					req.app.models.playerevent.findOne({id:eventid}).then(function(playerevent){
+						if(playerevent===undefined || playerevent.footballmatch!==footballmatch.id){
+							res.render('404');
+						}else{
+							var eventtype={}; //h menjen a rádiógomb
+							eventtype[playerevent.eventcategory]=true; //ez is
+							var team={}; // ez is
+							team[playerevent.team]=true; //ez is
+							res.render('playerevent/edit', {
+								playerevent: playerevent,
+								footballmatch: footballmatch,
+								data: data,
+								validationErrors: validationErrors,
+								eventtype: eventtype,
+								team: team
+							});
+						}
 					});
-				});
-			}
-		});
+				}
+			});
+		}
 	});
 	
 });

@@ -129,6 +129,9 @@ app.get('/logout', function(req, res){
 	res.redirect('/');
 });
 
+app.get('*', function(req, res){
+  res.render('404');
+});
 // ORM példány
 var orm = new Waterline();
 //orm.loadCollection(Waterline.Collection.extend(errorCollection));

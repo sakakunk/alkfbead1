@@ -255,6 +255,16 @@
         "createdAt": "2015-11-10T17:00:40.774Z",
         "updatedAt": "2015-11-10T17:01:13.629Z",
         "id": 30
+      },
+      {
+        "eventcategory": "redcard",
+        "name": "Pepe",
+        "eventTime": "40p",
+        "team": "away",
+        "footballmatch": 1,
+        "createdAt": "2015-11-10T17:27:40.268Z",
+        "updatedAt": "2015-11-10T17:27:40.268Z",
+        "id": 31
       }
     ]
   },
@@ -392,7 +402,7 @@
       "id": 16
     },
     "playerevent": {
-      "id": 30
+      "id": 31
     }
   }
 }
