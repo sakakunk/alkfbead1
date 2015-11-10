@@ -222,7 +222,7 @@ router.get('/list/:id/edit/:id2', function(req, res){
 						res.render('playerevent/error');
 				}else{
 					req.app.models.playerevent.findOne({id:eventid}).then(function(playerevent){
-						if(playerevent===undefined || playerevent.footballmatch!==footballmatch.id){
+						if(playerevent===undefined || playerevent.footballmatch!==footballmatch.id){ // a masodik feltetel nezi meg h a megfelelo IDjo meccshez a megfelelo eventet kérjük-e le
 							res.render('404');
 						}else{
 							var eventtype={}; //h menjen a rádiógomb
