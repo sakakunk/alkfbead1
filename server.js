@@ -6,12 +6,14 @@ var flash = require('connect-flash');
 
 var Waterline = require('waterline');
 var waterlineConfig = require('./config/waterline');
-var errorCollection = require('./models/error');
+var footballmatchCollection = require('./models/footballmatch');
 var userCollection = require('./models/user');
+var playereventCollection = require('./models/playerevent');
 
 var indexController = require('./controllers/index');
-var errorController = require('./controllers/error');
+//var errorController = require('./controllers/error');
 var loginController = require('./controllers/login');
+var footballmatchController = require('./controllers/footballmatch');
 
 //-------------------------------------------
 
@@ -19,79 +21,79 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
 passport.serializeUser(function(user, done) {
-    done(null, user);
+	done(null, user);
 });
 passport.deserializeUser(function(obj, done) {
-    done(null, obj);
+	done(null, obj);
 });
 
 // Local Strategy for sign-up
 passport.use('local-signup', new LocalStrategy({
-        usernameField: 'neptun',
-        passwordField: 'password',
-        passReqToCallback: true,
-    },   
-    function(req, neptun, password, done) {
-        req.app.models.user.findOne({ neptun: neptun }, function(err, user) {
-            if (err) { return done(err); }
-            if (user) {
-                return done(null, false, { message: 'Létező neptun.' });
-            }
-            req.app.models.user.create(req.body)
-            .then(function (user) {
-                return done(null, user);
-            })
-            .catch(function (err) {
-                return done(null, false, { message: err.details });
-            })
-        });
-    }
+		usernameField: 'neptun',
+		passwordField: 'password',
+		passReqToCallback: true,
+	},   
+	function(req, neptun, password, done) {
+		req.app.models.user.findOne({ neptun: neptun }, function(err, user) {
+			if (err) { return done(err); }
+			if (user) {
+				return done(null, false, { message: 'Létező neptun.' });
+			}
+			req.app.models.user.create(req.body)
+			.then(function (user) {
+				return done(null, user);
+			})
+			.catch(function (err) {
+				return done(null, false, { message: err.details });
+			})
+		});
+	}
 ));
 
 // Stratégia
 passport.use('local', new LocalStrategy({
-        usernameField: 'neptun',
-        passwordField: 'password',
-        passReqToCallback: true,
-    },
-    function(req, neptun, password, done) {
-        req.app.models.user.findOne({ neptun: neptun }, function(err, user) {
-            if (err) { return done(err); }
-            if (!user || !user.validPassword(password)) {
-                return done(null, false, { message: 'Helytelen adatok.' });
-            }
-            return done(null, user);
-        });
-    }
+		usernameField: 'neptun',
+		passwordField: 'password',
+		passReqToCallback: true,
+	},
+	function(req, neptun, password, done) {
+		req.app.models.user.findOne({ neptun: neptun }, function(err, user) {
+			if (err) { return done(err); }
+			if (!user || !user.validPassword(password)) {
+				return done(null, false, { message: 'Helytelen adatok.' });
+			}
+			return done(null, user);
+		});
+	}
 ));
 
 // Middleware segédfüggvény
 function setLocalsForLayout() {
-    return function (req, res, next) {
-        res.locals.loggedIn = req.isAuthenticated();
-        res.locals.user = req.user;
-        next();
-    }
+	return function (req, res, next) {
+		res.locals.loggedIn = req.isAuthenticated();
+		res.locals.user = req.user;
+		next();
+	};
 }
 function ensureAuthenticated(req, res, next) {
-    if (req.isAuthenticated()) { return next(); }
-    res.redirect('/login');
+	if (req.isAuthenticated()) { return next(); }
+	res.redirect('/login');
 }
 function andRestrictTo(role) {
-    return function(req, res, next) {
-        if (req.user.role == role) {
-            next();
-        } else {
-            next(new Error('Unauthorized'));
-        }
-    }
+	return function(req, res, next) {
+		if (req.user.role == role) {
+			next();
+		} else {
+			next(new Error('Unauthorized'));
+		}
+	}
 }
 
 //-------------------------------------------
 //  express app
 var app = express();
 
-//config
+//config HBS-t itt allitom be
 app.set('views', './views');
 app.set('view engine', 'hbs');
 
@@ -100,10 +102,10 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(session({
-    cookie: { maxAge: 600000 },
-    secret: 'titkos szoveg',
-    resave: false,
-    saveUninitialized: false,
+	cookie: { maxAge: 600000 },
+	secret: 'titkos szoveg',
+	resave: false,
+	saveUninitialized: false,
 }));
 app.use(flash());
 app.use(passport.initialize());
@@ -115,34 +117,37 @@ app.use(setLocalsForLayout());
 //endpoints
 app.use('/', indexController);
 // app.use('/errors', errorController);
-app.use('/errors', ensureAuthenticated, errorController);
+//app.use('/errors', ensureAuthenticated, errorController);
 app.use('/login', loginController);
+app.use('/footballmatch', ensureAuthenticated, footballmatchController);
 
 app.get('/operator', ensureAuthenticated, andRestrictTo('operator'), function(req, res) {
-    res.end('operator');
+	res.end('operator');
 });
 app.get('/logout', function(req, res){
-    req.logout();
-    res.redirect('/');
+	req.logout();
+	res.redirect('/');
 });
 
 // ORM példány
 var orm = new Waterline();
-orm.loadCollection(Waterline.Collection.extend(errorCollection));
+//orm.loadCollection(Waterline.Collection.extend(errorCollection));
 orm.loadCollection(Waterline.Collection.extend(userCollection));
+orm.loadCollection(Waterline.Collection.extend(footballmatchCollection));
+orm.loadCollection(Waterline.Collection.extend(playereventCollection));
 
 // ORM indítása
 orm.initialize(waterlineConfig, function(err, models) {
-    if(err) throw err;
-    
-    app.models = models.collections;
-    app.connections = models.connections;
-    
-    // Start Server
-    var port = process.env.PORT || 3000;
-    app.listen(port, function () {
-        console.log('Server is started.');
-    });
-    
-    console.log("ORM is started.");
+	if(err) throw err;
+	
+	app.models = models.collections;
+	app.connections = models.connections;
+	
+	// Start Server
+	var port = process.env.PORT || 3000;
+	app.listen(port, function () {
+		console.log('Server is started.');
+	});
+	
+	console.log("ORM is started.");
 });

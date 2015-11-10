@@ -69,7 +69,7 @@ router.post('/new', function (req, res) {
         })
         .then(function (error) {
             //siker
-            req.flash('info', 'Hiba sikeresen felvéve!');
+            req.flash('info', 'Meccs sikeresen felvéve!');
             res.redirect('/errors/list');
         })
         .catch(function (err) {

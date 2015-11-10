@@ -4,7 +4,7 @@ module.exports = {
     identity: 'user',
     connection: 'default',
     attributes: {
-        id: {
+        neptun: {
             type: 'string',
             required: true,
             unique: true,

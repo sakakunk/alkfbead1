@@ -1,70 +1,264 @@
 {
   "data": {
-    "error": [
-      {
-        "status": "new",
-        "location": "Lovi",
-        "description": "rossz netkáébel",
-        "date": "2015-11-03T12:48:44.197Z",
-        "createdAt": "2015-11-03T12:48:44.199Z",
-        "updatedAt": "2015-11-03T12:48:44.199Z",
-        "id": 1
-      }
-    ],
     "user": [
+      {
+        "surname": "x",
+        "forename": "x",
+        "neptun": "x",
+        "password": "$2a$10$AgRYH2RziWkAwhsA1nf2ZeHCw/LeTy4wSu/Wx0A6arRnrwvrgSnKC",
+        "avatar": "",
+        "role": "simpleuser",
+        "createdAt": "2015-11-09T13:25:12.074Z",
+        "updatedAt": "2015-11-09T13:25:12.074Z",
+        "id": 1
+      },
+      {
+        "surname": "a",
+        "forename": "a",
+        "neptun": "a",
+        "password": "$2a$10$QOWIH/iCIJR3QppW.XocqukdIa4CQ24Xkn.SEYBwyuv.HUXoD.S46",
+        "avatar": "",
+        "role": "simpleuser",
+        "createdAt": "2015-11-09T13:31:05.772Z",
+        "updatedAt": "2015-11-09T13:31:05.772Z",
+        "id": 2
+      },
       {
         "surname": "Bálint",
         "forename": "Ádám",
         "neptun": "gxid1u",
-        "password": "$2a$10$Zsdu1oIgzZv2z8izqjWcU.0kd0WCN/E5SGN/2DliXy2WutEpUDZn6",
+        "password": "$2a$10$cHX0.qGQKze9SqmIvHzZvuZ1iTruzipCHCQi3un3Ws1182mXIMQLa",
         "avatar": "",
-        "role": "riporter",
-        "createdAt": "2015-11-03T12:36:48.075Z",
-        "updatedAt": "2015-11-03T12:36:48.075Z",
+        "role": "admin",
+        "createdAt": "2015-11-09T13:45:15.168Z",
+        "updatedAt": "2015-11-09T13:45:15.168Z",
+        "id": 3
+      },
+      {
+        "surname": "KIss",
+        "forename": "Pista",
+        "neptun": "kisp",
+        "password": "$2a$10$FA3bG3uaMzk6aOss8J/Zk.ktMMLfQmVk.cosbomiOT1YltSmMqKIe",
+        "avatar": "",
+        "role": "simpleuser",
+        "createdAt": "2015-11-09T20:48:15.640Z",
+        "updatedAt": "2015-11-09T20:48:15.640Z",
+        "id": 4
+      }
+    ],
+    "footballmatch": [
+      {
+        "status": "scheduled",
+        "team1": "Barcelona",
+        "team2": "Real Madrid",
+        "result": "3-0",
+        "starttime": "2015-11-15T20:30:00.000Z",
+        "user": 1,
+        "createdAt": "2015-11-09T13:30:48.329Z",
+        "updatedAt": "2015-11-09T13:30:48.329Z",
         "id": 1
+      },
+      {
+        "status": "scheduled",
+        "team1": "Omonia Nicosia FC",
+        "team2": "APOEL",
+        "result": "2-2",
+        "starttime": "2015-11-09T18:00:00.000Z",
+        "user": 2,
+        "createdAt": "2015-11-09T19:17:07.979Z",
+        "updatedAt": "2015-11-10T17:07:01.045Z",
+        "id": 3
+      },
+      {
+        "status": "scheduled",
+        "team1": "West Ham",
+        "team2": "Chelsea",
+        "result": "2-1",
+        "starttime": "2015-11-08T18:00:00.000Z",
+        "user": 4,
+        "createdAt": "2015-11-09T20:49:00.354Z",
+        "updatedAt": "2015-11-09T20:49:00.354Z",
+        "id": 8
+      },
+      {
+        "status": "scheduled",
+        "team1": "Liverpool",
+        "team2": "Arsenal",
+        "result": "3-2",
+        "starttime": "2015-11-08T20:45:00.000Z",
+        "user": 2,
+        "createdAt": "2015-11-10T14:42:32.712Z",
+        "updatedAt": "2015-11-10T15:18:40.215Z",
+        "id": 10
+      },
+      {
+        "status": "scheduled",
+        "team1": "Liverpool",
+        "team2": "Real Madrid",
+        "result": "3-1",
+        "starttime": "2015-12-01T20:00:00.000Z",
+        "user": 1,
+        "createdAt": "2015-11-10T16:13:26.124Z",
+        "updatedAt": "2015-11-10T16:13:26.124Z",
+        "id": 13
+      },
+      {
+        "status": "scheduled",
+        "team1": "Barcelona",
+        "team2": "APOEL",
+        "result": "5-0",
+        "starttime": "2015-11-10T17:20:00.000Z",
+        "user": 1,
+        "createdAt": "2015-11-10T16:21:00.608Z",
+        "updatedAt": "2015-11-10T16:21:00.608Z",
+        "id": 14
+      },
+      {
+        "status": "scheduled",
+        "team1": "Liverpool",
+        "team2": "Arsenal",
+        "result": "5-0",
+        "starttime": "2015-01-08T20:30:00.000Z",
+        "user": 1,
+        "createdAt": "2015-11-10T16:32:20.578Z",
+        "updatedAt": "2015-11-10T16:32:20.578Z",
+        "id": 16
+      }
+    ],
+    "playerevent": [
+      {
+        "eventcategory": "goal",
+        "name": "Böde Dániel",
+        "eventTime": "20p",
+        "team": "home",
+        "footballmatch": 2,
+        "createdAt": "2015-11-09T13:35:50.962Z",
+        "updatedAt": "2015-11-09T13:35:50.963Z",
+        "id": 1
+      },
+      {
+        "eventcategory": "goal",
+        "name": "Rooney",
+        "eventTime": "23p",
+        "team": "home",
+        "footballmatch": 5,
+        "createdAt": "2015-11-09T20:04:29.859Z",
+        "updatedAt": "2015-11-09T20:04:29.859Z",
+        "id": 6
+      },
+      {
+        "eventcategory": "goal",
+        "name": "Fabregas",
+        "eventTime": "28p",
+        "team": "away",
+        "footballmatch": 5,
+        "createdAt": "2015-11-09T20:04:42.018Z",
+        "updatedAt": "2015-11-09T20:04:42.018Z",
+        "id": 7
+      },
+      {
+        "eventcategory": "yellowcard",
+        "name": "Pedro",
+        "eventTime": "35p",
+        "team": "away",
+        "footballmatch": 5,
+        "createdAt": "2015-11-09T20:04:56.003Z",
+        "updatedAt": "2015-11-09T20:04:56.003Z",
+        "id": 8
+      },
+      {
+        "eventcategory": "goal",
+        "name": "Gerrard",
+        "eventTime": "10p",
+        "team": "home",
+        "footballmatch": 6,
+        "createdAt": "2015-11-09T20:16:24.684Z",
+        "updatedAt": "2015-11-09T20:16:24.684Z",
+        "id": 9
+      },
+      {
+        "eventcategory": "goal",
+        "name": "Jóska Pista",
+        "eventTime": "12p",
+        "team": "home",
+        "footballmatch": 3,
+        "createdAt": "2015-11-09T20:42:26.142Z",
+        "updatedAt": "2015-11-10T14:59:35.537Z",
+        "id": 11
+      },
+      {
+        "eventcategory": "yellowcard",
+        "name": "Ronaldo",
+        "eventTime": "10p",
+        "team": "away",
+        "footballmatch": 7,
+        "createdAt": "2015-11-09T20:44:07.808Z",
+        "updatedAt": "2015-11-09T20:44:07.808Z",
+        "id": 12
+      },
+      {
+        "eventcategory": "goal",
+        "name": "Pedro",
+        "eventTime": "23p",
+        "team": "away",
+        "footballmatch": 8,
+        "createdAt": "2015-11-09T20:49:48.266Z",
+        "updatedAt": "2015-11-09T20:49:48.266Z",
+        "id": 13
+      },
+      {
+        "eventcategory": "redcard",
+        "name": "selrih",
+        "eventTime": "23p",
+        "team": "away",
+        "footballmatch": 3,
+        "createdAt": "2015-11-09T22:10:09.624Z",
+        "updatedAt": "2015-11-09T22:10:09.624Z",
+        "id": 15
+      },
+      {
+        "eventcategory": "owngoal",
+        "name": "Gerrard",
+        "eventTime": "30p",
+        "team": "home",
+        "footballmatch": 10,
+        "createdAt": "2015-11-10T14:42:55.045Z",
+        "updatedAt": "2015-11-10T14:54:06.176Z",
+        "id": 25
+      },
+      {
+        "eventcategory": "goal",
+        "name": "Messi",
+        "eventTime": "15p",
+        "team": "home",
+        "footballmatch": 1,
+        "createdAt": "2015-11-10T17:00:03.920Z",
+        "updatedAt": "2015-11-10T17:00:03.920Z",
+        "id": 27
+      },
+      {
+        "eventcategory": "goal",
+        "name": "Neymar",
+        "eventTime": "23p",
+        "team": "home",
+        "footballmatch": 1,
+        "createdAt": "2015-11-10T17:00:13.662Z",
+        "updatedAt": "2015-11-10T17:00:13.662Z",
+        "id": 28
+      },
+      {
+        "eventcategory": "goal",
+        "name": "Suarez",
+        "eventTime": "40p",
+        "team": "home",
+        "footballmatch": 1,
+        "createdAt": "2015-11-10T17:00:40.774Z",
+        "updatedAt": "2015-11-10T17:01:13.629Z",
+        "id": 30
       }
     ]
   },
   "schema": {
-    "error": {
-      "date": {
-        "type": "datetime"
-      },
-      "status": {
-        "type": "string",
-        "enum": [
-          "new",
-          "assigned",
-          "success",
-          "rejected",
-          "pending"
-        ]
-      },
-      "location": {
-        "type": "string"
-      },
-      "description": {
-        "type": "string"
-      },
-      "user": {
-        "type": "integer",
-        "model": "user",
-        "foreignKey": true,
-        "alias": "user"
-      },
-      "id": {
-        "type": "integer",
-        "autoIncrement": true,
-        "primaryKey": true,
-        "unique": true
-      },
-      "createdAt": {
-        "type": "datetime"
-      },
-      "updatedAt": {
-        "type": "datetime"
-      }
-    },
     "user": {
       "neptun": {
         "type": "string",
@@ -85,10 +279,96 @@
       "role": {
         "type": "string",
         "enum": [
-          "riporter",
-          "operator"
+          "simpleuser",
+          "admin"
         ],
-        "defaultsTo": "riporter"
+        "defaultsTo": "simpleuser"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "footballmatch": {
+      "starttime": {
+        "type": "datetime"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "scheduled",
+          "live",
+          "finished"
+        ],
+        "defaultsTo": "scheduled"
+      },
+      "team1": {
+        "type": "string"
+      },
+      "team2": {
+        "type": "string"
+      },
+      "result": {
+        "type": "string",
+        "defaultsTo": "-"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "playerevent": {
+      "eventcategory": {
+        "type": "string",
+        "enum": [
+          "goal",
+          "owngoal",
+          "yellowcard",
+          "redcard",
+          "subin",
+          "subout"
+        ]
+      },
+      "name": {
+        "type": "string"
+      },
+      "eventTime": {
+        "type": "string"
+      },
+      "team": {
+        "type": "string",
+        "enum": [
+          "home",
+          "away"
+        ]
+      },
+      "footballmatch": {
+        "type": "integer",
+        "model": "footballmatch",
+        "foreignKey": true,
+        "alias": "footballmatch"
       },
       "id": {
         "type": "integer",
@@ -105,11 +385,14 @@
     }
   },
   "counters": {
-    "error": {
-      "id": 1
-    },
     "user": {
-      "id": 1
+      "id": 4
+    },
+    "footballmatch": {
+      "id": 16
+    },
+    "playerevent": {
+      "id": 30
     }
   }
 }

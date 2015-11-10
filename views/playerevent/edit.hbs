@@ -1,0 +1,90 @@
+
+{{#each errorMessages}}
+<div class="alert alert-dismissible alert-danger">
+    <button type="button" class="close" playerevent-dismiss="alert">×</button>
+    {{this}}
+</div>
+{{/each}}
+
+<div class="page-header">
+	<h1>Esemény szerkesztése: {{footballmatch.team1}} - {{footballmatch.team2}} : {{footballmatch.result}}</h1>
+</div>
+
+<form class="form-horizontal" method="post" playerevent-toggle="validator">
+	<fieldset>
+		<div class="form-group
+			{{#if validationErrors.name}}
+				has-error
+			{{/if}}
+		">
+			<label for="name" class="col-lg-2 control-label">Játékos neve</label>
+			<div class="col-lg-10">
+				<input class="form-control" id="name" name="name"  type="text" value="{{playerevent.name}}">
+				{{#if validationErrors.name}}
+					<span class="help-block">{{validationErrors.name.msg}}</span>
+				{{/if}}
+				<div class="help-block with-errors"></div>
+			</div>
+		</div>
+		
+		<div class="form-group
+			{{#if validationErrors.eventcategory}}
+				has-error
+			{{/if}}
+		">
+			<label for="eventcategory" class="col-lg-2 control-label">Esemény</label>
+			<div class="col-lg-10">
+			<!--	<input class="form-control" id="eventcategory" name="eventcategory"  type="text" placeholder="" value="{{playerevent.eventcategory}}">
+				<!--<span class="help-block">Meg kell adni a helyszínt, ha pedig konkrét géppel van probléma, akkor azt is.</span> 
+				{{#if validationErrors.eventcategory}}
+					<span class="help-block">{{validationErrors.eventcategory.msg}}</span>
+				{{/if}}
+				<div class="help-block with-errors"></div> -->
+				
+				<input type="radio" id="eventcategory" name="eventcategory" value="goal" {{#if eventtype.goal}} checked="true" {{/if}}>Gól<br>
+				<input type="radio" id="eventcategory" name="eventcategory" value="owngoal" {{#if eventtype.owngoal}} checked="true" {{/if}}>Öngól<br>
+				<input type="radio" id="eventcategory" name="eventcategory" value="yellowcard" {{#if eventtype.yellowcard}} checked="true" {{/if}}>Sárgalap<br>
+				<input type="radio" id="eventcategory" name="eventcategory" value="redcard" {{#if eventtype.redcard}} checked="true" {{/if}}>Piroslap<br>
+				<input type="radio" id="eventcategory" name="eventcategory" value="subin" {{#if eventtype.subin}} checked="true" {{/if}}>Becserélés<br>
+				<input type="radio" id="eventcategory" name="eventcategory" value="subin" {{#if eventtype.subout}} checked="true" {{/if}}>Lecserélés
+				
+			</div>
+		</div>
+		
+		<div class="form-group
+			{{#if validationErrors.eventTime}}
+				has-error
+			{{/if}}
+		">
+			<label for="eventTime" class="col-lg-2 control-label">Idő</label>
+			<div class="col-lg-10">
+				<input class="form-control" id="eventTime" name="eventTime"  type="text" placeholder="XXp" value="{{playerevent.eventTime}}">
+				<!--<span class="help-block">Meg kell adni a helyszínt, ha pedig konkrét géppel van probléma, akkor azt is.</span> -->
+				{{#if validationErrors.eventTime}}
+					<span class="help-block">{{validationErrors.eventTime.msg}}</span>
+				{{/if}}
+				<div class="help-block with-errors"></div>
+			</div>
+		</div>
+		
+		<div class="form-group
+			{{#if validationErrors.team}}
+				has-error
+			{{/if}}
+		">
+			<label for="team" class="col-lg-2 control-label">Csapat</label>
+			<div class="col-lg-10">
+				
+			<input type="radio" id="team" name="team" value="home" {{#if team.home}} checked="true" {{/if}}>{{footballmatch.team1}}<br>
+			<input type="radio" id="team" name="team" value="away" {{#if team.away}} checked="true" {{/if}}>{{footballmatch.team2}}<br>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<div class="col-lg-10 col-lg-offset-2">
+				<!--<button type="reset" class="btn btn-default">Cancel</button> -->
+				<button type="submit" class="btn btn-primary">Küldés</button>
+			</div>
+		</div>
+	</fieldset>
+</form>
