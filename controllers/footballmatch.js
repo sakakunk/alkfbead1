@@ -24,26 +24,33 @@ function formatTime(footballmatch){
 	return  (footballmatch.starttime.getYear()+1900)+"-"+leadingZero((footballmatch.starttime.getMonth()+1),2)+"-"+leadingZero(footballmatch.starttime.getDate(),2)+" "+leadingZero(footballmatch.starttime.getHours(), 2)+":"+leadingZero(footballmatch.starttime.getMinutes(), 2);
 }
 function decorate(footballmatches){
+	
 	return footballmatches.map(function (e) {
-		var tmp = new Date();
-		tmp=tmp.getDate()+3600000;
-		var now=new Date(tmp);
-		var nowAnd2Hours = new Date();
-		nowAnd2Hours.setHours((now.getHours()+2) % 24);
-		//console.log(nowAnd2Hours);
-		//console.log(now);
-		if(e.starttime>now){
+		
+			
+		var now= new Date((new Date()).getTime()+3600000); // szerver és helyi idő eltolódás miatt
+		//var nowAnd2Hours = new Date(now.getTime()+7200000);
+		var matchEndAnd2Hours = new Date(e.starttime.getTime()+7200000);
+		console.log(now);
+		console.log(matchEndAnd2Hours);
+		console.log(e.starttime);
+		console.log("-");
+		console.log(e.starttime<=now);
+		console.log(now<matchEndAnd2Hours);
+		console.log(e.starttime > now);
+		if(e.starttime<=now && now<matchEndAnd2Hours){
+			e.status = 'live';
+		} else if(e.starttime > now){
 			e.status = 'scheduled';
-		} else if(e.starttime < nowAnd2Hours){
-			e.status = 'finished';
 		} else{
-			e.status='live';
+			e.status='finished';
 		}
 		e.status = statusTexts[e.status];
 		e.formattedDate = formatTime(e);
 		//e.statusClass = statusClasses[e.status];
 		return e;
 	});
+		
 }
 function decorateEvents(playerevents, footballmatch){
 	return playerevents.map(function(e){

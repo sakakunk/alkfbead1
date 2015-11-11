@@ -62,11 +62,11 @@
         "status": "scheduled",
         "team1": "Omonia Nicosia FC",
         "team2": "APOEL",
-        "result": "2-2",
+        "result": "2-3",
         "starttime": "2015-11-09T18:00:00.000Z",
         "user": 2,
         "createdAt": "2015-11-09T19:17:07.979Z",
-        "updatedAt": "2015-11-10T17:07:01.045Z",
+        "updatedAt": "2015-11-11T14:06:54.045Z",
         "id": 3
       },
       {
@@ -123,6 +123,28 @@
         "createdAt": "2015-11-10T16:32:20.578Z",
         "updatedAt": "2015-11-10T16:32:20.578Z",
         "id": 16
+      },
+      {
+        "status": "scheduled",
+        "team1": "Élő",
+        "team2": "Meccs",
+        "result": "0-0",
+        "starttime": "2015-11-11T15:00:00.000Z",
+        "user": 2,
+        "createdAt": "2015-11-11T14:31:06.733Z",
+        "updatedAt": "2015-11-11T14:31:06.733Z",
+        "id": 18
+      },
+      {
+        "status": "scheduled",
+        "team1": "Most",
+        "team2": "Következik",
+        "result": "-",
+        "starttime": "2015-11-11T16:00:00.000Z",
+        "user": 2,
+        "createdAt": "2015-11-11T14:40:01.871Z",
+        "updatedAt": "2015-11-11T14:40:01.871Z",
+        "id": 19
       }
     ],
     "playerevent": [
@@ -399,10 +421,10 @@
       "id": 4
     },
     "footballmatch": {
-      "id": 16
+      "id": 19
     },
     "playerevent": {
-      "id": 31
+      "id": 32
     }
   }
 }
