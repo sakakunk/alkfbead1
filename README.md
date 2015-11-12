@@ -6,6 +6,7 @@
 - [Tesztek](https://github.com/sakakunk/alkfbead1#tesztek)
 - [Tesztek](https://github.com/sakakunk/alkfbead1#tesztek)
 - [Tesztek](https://github.com/sakakunk/alkfbead1#tesztek)
+
 ##Leírás
 A project az ELTE Informatikai kar Alkalmazások fejlesztése tárgy első beadandója során készült.
 A project rövid leírása: egy labdarúgó mérkőzés eredményeit, illetve az egyes mérkőzésekhez tartozó játékos-események 
