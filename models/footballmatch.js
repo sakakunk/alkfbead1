@@ -2,11 +2,6 @@ module.exports = {
     identity: 'footballmatch',
     connection: 'default',
     attributes: {
-        /*azon: {
-            type: 'string',
-            required: true,
-            unique: true,
-        },*/
         starttime: {
             type: 'datetime',
             defaultsTo: function () { return new Date(); },

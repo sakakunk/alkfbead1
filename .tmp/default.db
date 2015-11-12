@@ -205,11 +205,11 @@
         "status": "scheduled",
         "team1": "Norvégia",
         "team2": "Magyarország",
-        "result": "0-0",
+        "result": "0-1",
         "starttime": "2015-11-12T20:45:00.000Z",
         "user": 2,
         "createdAt": "2015-11-12T19:53:36.982Z",
-        "updatedAt": "2015-11-12T19:53:36.982Z",
+        "updatedAt": "2015-11-12T20:47:26.636Z",
         "id": 27
       }
     ],
@@ -503,6 +503,86 @@
         "createdAt": "2015-11-12T19:00:39.358Z",
         "updatedAt": "2015-11-12T19:00:39.358Z",
         "id": 48
+      },
+      {
+        "eventcategory": "yellowcard",
+        "name": "Tettey A.",
+        "eventTime": "20p",
+        "team": "home",
+        "footballmatch": 27,
+        "createdAt": "2015-11-12T20:46:08.186Z",
+        "updatedAt": "2015-11-12T20:46:08.186Z",
+        "id": 49
+      },
+      {
+        "eventcategory": "yellowcard",
+        "name": "Gera Z.",
+        "eventTime": "23p",
+        "team": "away",
+        "footballmatch": 27,
+        "createdAt": "2015-11-12T20:46:29.069Z",
+        "updatedAt": "2015-11-12T20:46:29.069Z",
+        "id": 50
+      },
+      {
+        "eventcategory": "goal",
+        "name": " Kleinheisler L.",
+        "eventTime": "26p",
+        "team": "away",
+        "footballmatch": 27,
+        "createdAt": "2015-11-12T20:46:48.995Z",
+        "updatedAt": "2015-11-12T20:46:48.995Z",
+        "id": 51
+      },
+      {
+        "eventcategory": "yellowcard",
+        "name": " Kádár T.",
+        "eventTime": "34p",
+        "team": "away",
+        "footballmatch": 27,
+        "createdAt": "2015-11-12T20:47:05.788Z",
+        "updatedAt": "2015-11-12T20:47:05.788Z",
+        "id": 52
+      },
+      {
+        "eventcategory": "yellowcard",
+        "name": " Guzmics R.",
+        "eventTime": "39p",
+        "team": "away",
+        "footballmatch": 27,
+        "createdAt": "2015-11-12T20:47:18.771Z",
+        "updatedAt": "2015-11-12T20:47:18.771Z",
+        "id": 53
+      },
+      {
+        "eventcategory": "subin",
+        "name": "Pedersen M.",
+        "eventTime": "61p",
+        "team": "home",
+        "footballmatch": 27,
+        "createdAt": "2015-11-12T21:08:35.704Z",
+        "updatedAt": "2015-11-12T21:08:35.704Z",
+        "id": 54
+      },
+      {
+        "eventcategory": "subout",
+        "name": "Soderlund A.",
+        "eventTime": "61p",
+        "team": "home",
+        "footballmatch": 27,
+        "createdAt": "2015-11-12T21:09:03.367Z",
+        "updatedAt": "2015-11-12T21:09:03.367Z",
+        "id": 55
+      },
+      {
+        "eventcategory": "yellowcard",
+        "name": "Elabdellaoui O.",
+        "eventTime": "65p",
+        "team": "home",
+        "footballmatch": 27,
+        "createdAt": "2015-11-12T21:09:19.836Z",
+        "updatedAt": "2015-11-12T21:09:19.836Z",
+        "id": 56
       }
     ]
   },
@@ -640,7 +720,7 @@
       "id": 27
     },
     "playerevent": {
-      "id": 48
+      "id": 56
     }
   }
 }

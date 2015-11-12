@@ -8,11 +8,6 @@ module.exports = {
             enum: ['goal', 'owngoal', 'yellowcard', "redcard", 'subin', 'subout'],
             required: true,
         },
-        /*azon: {
-           type: 'string',
-            unique: true,
-            required: true
-        },*/
         name: {
             type: 'string',
             required: true,
