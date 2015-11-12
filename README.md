@@ -5,7 +5,7 @@
 - [Felhasználói felület](https://github.com/sakakunk/alkfbead1#interfész)
 - [Tesztek](https://github.com/sakakunk/alkfbead1#tesztek)
 - [Fejlesztés és felhasználás](https://github.com/sakakunk/alkfbead1#fejlesztés-és-felhasználás)
-- [További fejlesztési lehetőség](https://github.com/sakakunk/alkfbead1#funkciok)
+- [További fejlesztési lehetőség](https://github.com/sakakunk/alkfbead1#további-fejlesztési-lehetőség)
 
 ##Leírás
 A project az ELTE Informatikai kar Alkalmazások fejlesztése tárgy első beadandója során készült.
