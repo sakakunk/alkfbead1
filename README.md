@@ -4,7 +4,7 @@
 - [Modellek](https://github.com/sakakunk/alkfbead1#modellek)
 - [Felhasználói felület](https://github.com/sakakunk/alkfbead1#interfész)
 - [Tesztek](https://github.com/sakakunk/alkfbead1#tesztek)
-- [Fejlesztés és felhasználás](https://github.com/sakakunk/alkfbead1#fejlesztes)
+- [Fejlesztés és felhasználás](https://github.com/sakakunk/alkfbead1#fejlesztés-és-felhasználás)
 - [További fejlesztési lehetőség](https://github.com/sakakunk/alkfbead1#funkciok)
 
 ##Leírás
