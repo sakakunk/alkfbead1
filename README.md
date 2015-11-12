@@ -36,6 +36,7 @@ fel kell telepíteni őket. A függősségek listája:
  
 ##Modellek
 ![Adatbázis modell](https://github.com/3BL/alkfejlbead1/blob/master/documentation/modelrelations.png)
+
 A fenti képen látható az adatbázis-modell. A user modell írja le a felhasználót, akinek az azonosítója (neptun) egyedi.
 Felhasználóból tetszőleges számú lehet, és minden egyes felhasználóról elmentjük a kereszt és vezetéknevét, 
 felhasználónevét(neptun), jelszavát (titkosítva), illetve a felhasználó által létrehozott focimeccseket. Létezik normál felhasználó(simpleuser), illetve admin.
@@ -48,8 +49,10 @@ játékosról van szó(name), mi az esemény időpontja(eventTime), az esemény 
 piroslap(redcard), gól(goal), öngól(owngoal), becserélés(subin) és lecserélés(subout). Utóbbi adatokat stringként tároljuk.
 A modellben 2 helyen is van one-to-many kapcsolat: egy felhasználóhoz tartozhat sok focimeccs, de egy meccs csak egy felhasználóhoz tartozik, valamint egy meccshez tartozik sok játékos esemény, de egy esemény csak egy meccshez tartozhat.
 A modellek megvalósításáért az ORM techológia segítségével történik.
+
 ##Interfész
 ![Adatbázis modell](https://github.com/3BL/alkfejlbead1/blob/master/documentation/webdesign.png)
+
 Felhasználói felület:
 A weboldal felső részén található egy piros sáv, melyet találhatóak a következő gombok: bal oldalon: "Eredmények": erre 
 kattintva az eredményeket listázza az oldal az adott felhazsnáló számára. Jobb oldalon: ha a felhasználó be van jelentkezve, 
@@ -59,16 +62,19 @@ Az oldal többi részén űrlapok, illetve listázó oldalak jelennek meg attól
 tudunk bejelentkezni, regisztrálni, új focimeccset illetve eseményet felvinni, szerkeszteni (mindezeket űrlapok 
 segítségével), valamint tudjuk listázni az adott felhasználóhoz tartozó focimeccseket, és a meccsekhez tartozó 
 játékos-eseményeket.
+
 ##Tesztek
 Kétféle képpen teszteltem a programom:
 * A chai tipusú tesztelővel végeztem teszteseteket a felhasználókra vonatkozóan, melyek a user.test.js fájlban találhatók.
 * Handlebars fájlokban a validator, amivel ellenőrizni lehet az űrlapok helyes kitöltését, megakadályozva, hogy 
 értelmetlen/hiányos adatokkal próbáljunk modellpéldányokat létrehozni.
+
 ##Fejlesztés és felhasználás
 A beadandót a cloud9 webes IDE-ben készítettem el, Windowson, Google Chrome böngészőből. A project folytatható, 
 szerkeszthető, ekkor a függőségeket és a bower-t fel kell telepíteni (npm install --production és bower install a c9 
 bash-ben).
 A fejlesztés zökkenőmentes menetéhez szükség lesz 2GB memóriára és valamilyen 2 magos processzorra minimum.
+
 ##Funkció lista 
 - Regisztráció, login oldal működik, a jelszó bcrypt-el kódolva kerül az adatbázisba
 - A felhasználónév egyedi, csak egy lehet mindegyikből, ha ez nem teljesül, akkor hibát jelez a program
