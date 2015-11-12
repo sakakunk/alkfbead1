@@ -82,6 +82,7 @@ A fejlesztés zökkenőmentes menetéhez szükség lesz 2GB memóriára és vala
 - session működik
 - Listázó oldal müködik, mindenki a saját maga által létrehozott meccseket látja, kivéve az admint
 - Szerkesztés és Törlés funkció müködik
-További fejlesztési lehetőség:
+
+##További fejlesztési lehetőség:
 - többféle tesztelési és validációs lehetőség implementálása
 - többféle felhasználói szerepkör megvalósításának felhasználói felületből történő kiosztása
