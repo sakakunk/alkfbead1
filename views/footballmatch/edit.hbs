@@ -61,6 +61,12 @@
 			{{#if dateError}}
 				has-error
 			{{/if}}
+			{{#if invalidDateFormat}}
+				has-error
+			{{/if}}
+			{{#if invalidDate}}
+				has-error
+			{{/if}}
 		">
 			<label for="starttime" class="col-lg-2 control-label">Kezdési időpont</label>
 			<div class="col-lg-10">
@@ -69,6 +75,12 @@
 				<!--<span class="help-block">Meg kell adni a helyszínt, ha pedig konkrét géppel van probléma, akkor azt is.</span> -->
 				{{#if dateError}}
 					<span class="help-block">{{validationErrors.starttime.msg}}</span>
+				{{/if}}
+				{{#if invalidDateFormat}}
+					<span class="help-block">A dátum formátuma nem megfelelő!</span>
+				{{/if}}
+				{{#if invalidDate}}
+					<span class="help-block">A dátum nem valós!</span>
 				{{/if}}
 				<div class="help-block with-errors"></div>
 			</div>

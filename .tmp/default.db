@@ -44,6 +44,17 @@
         "createdAt": "2015-11-09T20:48:15.640Z",
         "updatedAt": "2015-11-09T20:48:15.640Z",
         "id": 4
+      },
+      {
+        "surname": "Nagy",
+        "forename": "Mate",
+        "neptun": "NOPE",
+        "password": "$2a$10$c2k54wx6Q8Iw9uYho79pUeUZgE5uTujfIVIYMV4GfZaVhKU5cqnt2",
+        "avatar": "",
+        "role": "simpleuser",
+        "createdAt": "2015-11-12T18:55:33.026Z",
+        "updatedAt": "2015-11-12T18:55:33.026Z",
+        "id": 5
       }
     ],
     "footballmatch": [
@@ -66,7 +77,7 @@
         "starttime": "2015-11-09T18:00:00.000Z",
         "user": 2,
         "createdAt": "2015-11-09T19:17:07.979Z",
-        "updatedAt": "2015-11-11T14:06:54.045Z",
+        "updatedAt": "2015-11-12T18:42:45.659Z",
         "id": 3
       },
       {
@@ -126,25 +137,80 @@
       },
       {
         "status": "scheduled",
-        "team1": "Élő",
-        "team2": "Meccs",
+        "team1": "Liverpool",
+        "team2": "Real Madrid",
         "result": "0-0",
-        "starttime": "2015-11-11T15:00:00.000Z",
+        "starttime": "2015-11-12T19:00:00.000Z",
         "user": 2,
         "createdAt": "2015-11-11T14:31:06.733Z",
-        "updatedAt": "2015-11-11T14:31:06.733Z",
+        "updatedAt": "2015-11-12T18:41:37.813Z",
         "id": 18
       },
       {
         "status": "scheduled",
-        "team1": "Most",
-        "team2": "Következik",
-        "result": "-",
+        "team1": "Ferencváros",
+        "team2": "MTK",
+        "result": "3-1",
         "starttime": "2015-11-11T16:00:00.000Z",
         "user": 2,
         "createdAt": "2015-11-11T14:40:01.871Z",
-        "updatedAt": "2015-11-11T14:40:01.871Z",
+        "updatedAt": "2015-11-12T18:41:58.577Z",
         "id": 19
+      },
+      {
+        "status": "scheduled",
+        "team1": "Ferencváros",
+        "team2": "Videoton",
+        "result": "3-1",
+        "starttime": "2015-11-12T10:45:00.000Z",
+        "user": 2,
+        "createdAt": "2015-11-12T09:43:16.311Z",
+        "updatedAt": "2015-11-12T09:43:16.311Z",
+        "id": 20
+      },
+      {
+        "status": "scheduled",
+        "team1": "Liverpool",
+        "team2": "Bayern München",
+        "result": "-",
+        "starttime": "2015-12-01T20:00:00.000Z",
+        "user": 2,
+        "createdAt": "2015-11-12T18:45:35.655Z",
+        "updatedAt": "2015-11-12T19:26:08.953Z",
+        "id": 21
+      },
+      {
+        "status": "scheduled",
+        "team1": "kutyaszar",
+        "team2": "libafos",
+        "result": "3:3",
+        "starttime": "2015-11-29T23:46:00.000Z",
+        "user": 5,
+        "createdAt": "2015-11-12T18:56:23.512Z",
+        "updatedAt": "2015-11-12T18:56:23.512Z",
+        "id": 22
+      },
+      {
+        "status": "scheduled",
+        "team1": "Paks FC",
+        "team2": "Diósgyőr",
+        "result": "1-0",
+        "starttime": "2015-11-12T20:00:00.000Z",
+        "user": 1,
+        "createdAt": "2015-11-12T18:57:53.890Z",
+        "updatedAt": "2015-11-12T19:01:06.548Z",
+        "id": 23
+      },
+      {
+        "status": "scheduled",
+        "team1": "Norvégia",
+        "team2": "Magyarország",
+        "result": "0-0",
+        "starttime": "2015-11-12T20:45:00.000Z",
+        "user": 2,
+        "createdAt": "2015-11-12T19:53:36.982Z",
+        "updatedAt": "2015-11-12T19:53:36.982Z",
+        "id": 27
       }
     ],
     "playerevent": [
@@ -230,12 +296,12 @@
       },
       {
         "eventcategory": "redcard",
-        "name": "selrih",
+        "name": "Józsi",
         "eventTime": "23p",
         "team": "away",
         "footballmatch": 3,
         "createdAt": "2015-11-09T22:10:09.624Z",
-        "updatedAt": "2015-11-09T22:10:09.624Z",
+        "updatedAt": "2015-11-12T18:40:24.670Z",
         "id": 15
       },
       {
@@ -287,6 +353,156 @@
         "createdAt": "2015-11-10T17:27:40.268Z",
         "updatedAt": "2015-11-10T17:27:40.268Z",
         "id": 31
+      },
+      {
+        "eventcategory": "owngoal",
+        "name": "Sakakunk",
+        "eventTime": "156",
+        "team": "home",
+        "footballmatch": 3,
+        "createdAt": "2015-11-12T18:42:29.792Z",
+        "updatedAt": "2015-11-12T18:42:29.792Z",
+        "id": 33
+      },
+      {
+        "eventcategory": "goal",
+        "name": "Labdarugú wcpapírguriga forgató szomorú szamuráj rája",
+        "eventTime": "42p",
+        "team": "home",
+        "footballmatch": 3,
+        "createdAt": "2015-11-12T18:43:24.345Z",
+        "updatedAt": "2015-11-12T18:43:24.345Z",
+        "id": 34
+      },
+      {
+        "eventcategory": "yellowcard",
+        "name": "Hajrá fradi!",
+        "eventTime": "1p",
+        "team": "home",
+        "footballmatch": 20,
+        "createdAt": "2015-11-12T18:44:29.145Z",
+        "updatedAt": "2015-11-12T18:44:29.145Z",
+        "id": 35
+      },
+      {
+        "eventcategory": "redcard",
+        "name": "Ó bakker....",
+        "eventTime": "2p",
+        "team": "home",
+        "footballmatch": 20,
+        "createdAt": "2015-11-12T18:44:38.897Z",
+        "updatedAt": "2015-11-12T18:44:38.897Z",
+        "id": 36
+      },
+      {
+        "eventcategory": "redcard",
+        "name": "Má megin'?",
+        "eventTime": "2",
+        "team": "home",
+        "footballmatch": 19,
+        "createdAt": "2015-11-12T18:44:53.138Z",
+        "updatedAt": "2015-11-12T18:44:53.138Z",
+        "id": 37
+      },
+      {
+        "eventcategory": "subout",
+        "name": "Mindenkit",
+        "eventTime": "90p",
+        "team": "home",
+        "footballmatch": 18,
+        "createdAt": "2015-11-12T18:45:12.103Z",
+        "updatedAt": "2015-11-12T18:45:12.103Z",
+        "id": 38
+      },
+      {
+        "eventcategory": "subin",
+        "name": "Mindenkit",
+        "eventTime": "91p",
+        "team": "home",
+        "footballmatch": 18,
+        "createdAt": "2015-11-12T18:50:47.718Z",
+        "updatedAt": "2015-11-12T18:50:47.718Z",
+        "id": 39
+      },
+      {
+        "eventcategory": "goal",
+        "name": "Időutazó Pista",
+        "eventTime": "22p",
+        "team": "home",
+        "footballmatch": 22,
+        "createdAt": "2015-11-12T18:58:54.747Z",
+        "updatedAt": "2015-11-12T18:58:54.747Z",
+        "id": 40
+      },
+      {
+        "eventcategory": "goal",
+        "name": "Időutazó Pista",
+        "eventTime": "42p",
+        "team": "home",
+        "footballmatch": 22,
+        "createdAt": "2015-11-12T18:59:06.669Z",
+        "updatedAt": "2015-11-12T18:59:06.669Z",
+        "id": 41
+      },
+      {
+        "eventcategory": "goal",
+        "name": "Időutazó Pista",
+        "eventTime": "82p",
+        "team": "home",
+        "footballmatch": 22,
+        "createdAt": "2015-11-12T18:59:15.474Z",
+        "updatedAt": "2015-11-12T18:59:15.474Z",
+        "id": 42
+      },
+      {
+        "eventcategory": "owngoal",
+        "name": "Időutazó Pista",
+        "eventTime": "12p",
+        "team": "home",
+        "footballmatch": 22,
+        "createdAt": "2015-11-12T18:59:24.779Z",
+        "updatedAt": "2015-11-12T18:59:24.779Z",
+        "id": 43
+      },
+      {
+        "eventcategory": "goal",
+        "name": "Időutazó Labda",
+        "eventTime": "42p",
+        "team": "away",
+        "footballmatch": 22,
+        "createdAt": "2015-11-12T18:59:41.992Z",
+        "updatedAt": "2015-11-12T18:59:41.992Z",
+        "id": 44
+      },
+      {
+        "eventcategory": "goal",
+        "name": "Időutazó Béla",
+        "eventTime": "89p",
+        "team": "away",
+        "footballmatch": 22,
+        "createdAt": "2015-11-12T18:59:59.219Z",
+        "updatedAt": "2015-11-12T18:59:59.219Z",
+        "id": 46
+      },
+      {
+        "eventcategory": "subout",
+        "name": "Kiss Pista",
+        "eventTime": "30p",
+        "team": "home",
+        "footballmatch": 23,
+        "createdAt": "2015-11-12T19:00:20.128Z",
+        "updatedAt": "2015-11-12T19:00:20.128Z",
+        "id": 47
+      },
+      {
+        "eventcategory": "subin",
+        "name": "Oláh Lajos",
+        "eventTime": "30p",
+        "team": "home",
+        "footballmatch": 23,
+        "createdAt": "2015-11-12T19:00:39.358Z",
+        "updatedAt": "2015-11-12T19:00:39.358Z",
+        "id": 48
       }
     ]
   },
@@ -418,13 +634,13 @@
   },
   "counters": {
     "user": {
-      "id": 4
+      "id": 5
     },
     "footballmatch": {
-      "id": 19
+      "id": 27
     },
     "playerevent": {
-      "id": 32
+      "id": 48
     }
   }
 }

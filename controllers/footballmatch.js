@@ -182,11 +182,13 @@ router.get('/new', function (req, res) { //oldal elso betoltese
    var validationErrors = (req.flash('validationErrors') || [{}]).pop();
    var data = (req.flash('data') || [{}]).pop();
    var invalidDateFormat = (req.flash('invalidDateFormat') || [{}]).pop();
+   var invalidDate = (req.flash('invalidDate') || [{}]).pop();
    
    res.render('footballmatch/new', {
 	   validationErrors: validationErrors,
 	   data: data,
-	   invalidDateFormat: invalidDateFormat
+	   invalidDateFormat: invalidDateFormat,
+	   invalidDate: invalidDate
    }); 
 });
 
@@ -305,11 +307,14 @@ router.post('/list/:id/eventdelete/:id2', function(req, res){
 	});
 	
 });
+//itt
 router.get('/list/:id/edit', function(req, res) {
 	var userid = req.user.id;
 	var footballmatchid = req.params.id;
 	var validationErrors = (req.flash('validationErrors') || [{}]).pop();	
 	var data = (req.flash('data') || [{}]).pop();
+	var invalidDateFormat = (req.flash('invalidDateFormat') || [{}]).pop();
+	var invalidDate = (req.flash('invalidDate') || [{}]).pop();
 	req.app.models.footballmatch.findOne({id:footballmatchid}).then(function ( footballmatch) {
 		req.app.models.user.findOne({id:userid}).then(function(user){
 			if(footballmatch.user!==userid && user.role	!=='admin'){ // ha nincs jogosultsága megtekinteni
@@ -319,7 +324,9 @@ router.get('/list/:id/edit', function(req, res) {
 				res.render('footballmatch/edit', {
 					footballmatch: footballmatch,
 					data: data,
-					validationErrors: validationErrors
+					validationErrors: validationErrors,
+					invalidDateFormat : invalidDateFormat,
+					invalidDate : invalidDate
 				});
 			}
 		});
@@ -339,10 +346,27 @@ router.post('/list/:id/edit', function(req, res) {
 				req.checkBody('csapat2', 'Hibás vendég csapat').notEmpty().withMessage('Kötelező megadni!'); //ellenorizzuk, h ures-e
 				req.checkBody('eredmeny', 'Hibás eredmény').notEmpty().withMessage('Kötelező megadni!'); //ellenorizzuk, h ures-e
 				req.checkBody('starttime', 'Hibás kezdési időpont').notEmpty().withMessage('Kötelező megadni!'); //ellenorizzuk, h ures-e
+				//itt
 				var validationErrors = req.validationErrors(true);
-				if(validationErrors){
+				var invalidDateFormat=undefined;
+				var invalidDate=undefined;
+				if(!validationErrors.starttime){
+					if(!/[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}/.test(req.body.starttime)){
+						invalidDateFormat=true;
+					}else {
+						var timestamp=Date.parse(req.body.starttime); //teszteljuk, h tudun.e datumot csinalni belole
+						if(isNaN(timestamp)){
+							console.log('itt');
+							invalidDate=true;
+						}
+					}
+				}
+				
+				if(validationErrors || invalidDateFormat || invalidDate){
 					req.flash('validationErrors', validationErrors); //flashben tarolom a hibakat
 					req.flash('data', req.body); // - || -
+					req.flash('invalidDateFormat', invalidDateFormat);
+					req.flash('invalidDate', invalidDate);
 					res.redirect('/footballmatch/list/' + footballmatchid +'/edit'); 
 				}else{
 					req.app.models.footballmatch.update({id:footballmatchid}, {
@@ -402,17 +426,23 @@ router.post('/new', function (req, res) { //ez fogadja az adatokat
 	
 	var validationErrors = req.validationErrors(true);
 	var invalidDateFormat=undefined;
+	var invalidDate=undefined;
 	if(!validationErrors.starttime){
 		if(!/[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}/.test(req.body.starttime)){
-			console.log('hiba');
 			invalidDateFormat=true;
+		}else {
+			var timestamp=Date.parse(req.body.starttime); //teszteljuk, h tudun.e datumot csinalni belole
+			if(isNaN(timestamp)){
+				invalidDate=true;
+			}
 		}
 	}
 	
-	if (validationErrors || invalidDateFormat) {
+	if (validationErrors || invalidDateFormat || invalidDate) {
 		req.flash('validationErrors', validationErrors); //flashben tarolom a hibakat
 		req.flash('data', req.body); // - || -
 		req.flash('invalidDateFormat', invalidDateFormat); // - || -
+		req.flash('invalidDate', invalidDate); // - || -
 		res.redirect('/footballmatch/new');   // - || -
 	}
 	else {
