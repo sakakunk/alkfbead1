@@ -5,6 +5,7 @@
 - [Felhasználói felület](https://github.com/sakakunk/alkfbead1#interfész)
 - [Tesztek](https://github.com/sakakunk/alkfbead1#tesztek)
 - [Fejlesztés és felhasználás](https://github.com/sakakunk/alkfbead1#fejlesztés-és-felhasználás)
+- [Funkció lista](https://github.com/sakakunk/alkfbead1#funkció-lista)
 - [További fejlesztési lehetőség](https://github.com/sakakunk/alkfbead1#további-fejlesztési-lehetőség)
 
 ##Leírás
