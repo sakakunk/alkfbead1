@@ -37,7 +37,7 @@ fel kell telepíteni őket. A függősségek listája:
  *chai
  
 ##Modellek
-![Adatbázis modell](https://github.com/3BL/alkfejlbead1/blob/master/documentation/modelrelations.png)
+![Adatbázis modell](https://github.com/sakakunk/alkfbead1/blob/master/pics/alkfejl1.png)
 
 A fenti képen látható az adatbázis-modell. A user modell írja le a felhasználót, akinek az azonosítója (neptun) egyedi.
 Felhasználóból tetszőleges számú lehet, és minden egyes felhasználóról elmentjük a kereszt és vezetéknevét, 
@@ -53,7 +53,7 @@ A modellben 2 helyen is van one-to-many kapcsolat: egy felhasználóhoz tartozha
 A modellek megvalósításáért az ORM techológia segítségével történik.
 
 ##Interfész
-![Adatbázis modell](https://github.com/3BL/alkfejlbead1/blob/master/documentation/webdesign.png)
+![Design](https://github.com/sakakunk/alkfbead1/blob/master/pics/alkfejl1a.png)
 
 Felhasználói felület:
 A weboldal felső részén található egy piros sáv, melyet találhatóak a következő gombok: bal oldalon: "Eredmények": erre 
