@@ -419,7 +419,6 @@ router.post('/list/:id/confirmdelete', function(req, res) {
 router.post('/new', function (req, res) { //ez fogadja az adatokat
 	// adatok ellenőrzése
 	req.checkBody('csapat1', 'Hibás hazai csapat').notEmpty().withMessage('Kötelező megadni!'); //ellenorizzuk, h ures-e
-	//req.sanitizeBody('leiras').escape(); // ne lehessen html, JS kodot feltolteni
 	req.checkBody('csapat2', 'Hibás vendég csapat').notEmpty().withMessage('Kötelező megadni!'); //ellenorizzuk, h ures-e
 	req.checkBody('eredmeny', 'Hibás eredmény').notEmpty().withMessage('Kötelező megadni!'); //ellenorizzuk, h ures-e
 	req.checkBody('starttime', 'Hibás kezdési időpont').notEmpty().withMessage('Kötelező megadni!'); //ellenorizzuk, h ures-e
